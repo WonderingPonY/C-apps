@@ -9,7 +9,7 @@ using namespace std;
 struct node
 {
   char info;
-  int sounter;
+  int counter;
   struct node *next;
 }*start;
 
@@ -63,14 +63,14 @@ int main()
         cout<<"Inserting Element at first"<<endl;
         cout<<"Enter the character to be inserted: ";
         cin>>element;
-        sl.insert_begin(elemnt);
+        sl.insert_begin(element);
         cout<<endl;
         break;
       case 2:
         cout<<"inserting Element at last"<<endl;
         cout<<"Enter the character to be inserted: ";
         cin>>element;
-        sl.inster_last(element);
+        sl.insert_last(element);
         cout<<endl;
         break;
       case 3:
@@ -102,7 +102,7 @@ int main()
       case 8:
         cout<<"Exiting..."<<endl;
         exit(1);
-        break
+        break;
       default:
         cout<<"Wrong choice"<<endl;
     }
@@ -136,7 +136,7 @@ void self_list::insert_last(char value)
 {
   struct node *temp, *s;
   temp = create_node(value);
-  if (start = NULL)
+  if (start == NULL)
   {
     start = temp;
     return;
@@ -273,7 +273,7 @@ void self_list::move_to_front()
       {
         pos = search(stream[i]);
         delete_pos(pos);
-        insert_begin(streat[i]);
+        insert_begin(stream[i]);
       }
       cout<<stream[i]<<": ";
       display();
@@ -292,19 +292,19 @@ void self_list::transpose()
   }
   char stream[100001];
   cout<<"Enter the string of elements searched"<<endl;
-  cin<<stream;
+  cin>>stream;
   int len, pos, temp;
   len = strlen(stream);
   struct node *s;
   for (int i = 0;i < len;i++)
   {
     s = start;
-    if (seach(stream[i]) != 0)
+    if (search(stream[i]) != 0)
     {
       if(search(stream[i]) != 1)
       {
-        pos = search(stream[i];
-        for Iint j = 1;j < pos - 1;j++)
+        pos = search(stream[i]);
+        for (int j = 1;j < pos - 1;j++)
         {
           s = s->next;
         }
